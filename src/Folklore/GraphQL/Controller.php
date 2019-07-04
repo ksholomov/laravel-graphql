@@ -3,7 +3,7 @@
 use Illuminate\Routing\Controller as LaravelController;
 use Laravel\Lumen\Routing\Controller as LumenController;
 
-if (class_exists('Illuminate\Routing\Controller')) {
+if (app() instanceof \Illuminate\Foundation\Application) {
     
     class Controller extends LaravelController
     {
